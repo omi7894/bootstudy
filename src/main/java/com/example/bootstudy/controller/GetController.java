@@ -1,6 +1,6 @@
 package com.example.bootstudy.controller;
 
-import com.example.bootstudy.dto.MemberDTO;
+import com.example.bootstudy.data.dto.MemberDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.lang.reflect.Member;

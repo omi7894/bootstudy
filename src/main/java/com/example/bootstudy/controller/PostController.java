@@ -1,6 +1,6 @@
 package com.example.bootstudy.controller;
 
-import com.example.bootstudy.dto.MemberDTO;
+import com.example.bootstudy.data.dto.MemberDTO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
