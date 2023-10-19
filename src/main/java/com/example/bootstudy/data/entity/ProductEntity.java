@@ -1,9 +1,9 @@
 package com.example.bootstudy.data.entity;
 
 import com.example.bootstudy.data.dto.ProductDto;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Entity;
 import lombok.*;
 
 @Entity

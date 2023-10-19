@@ -3,7 +3,7 @@ package com.example.bootstudy.data.handler.Impl;
 import com.example.bootstudy.data.dao.ProductDAO;
 import com.example.bootstudy.data.entity.ProductEntity;
 import com.example.bootstudy.data.handler.ProductDataHandler;
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
