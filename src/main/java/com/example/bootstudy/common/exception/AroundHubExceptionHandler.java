@@ -1,4 +1,4 @@
-package com.example.bootstudy.exception;
+package com.example.bootstudy.common.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +30,18 @@ public class AroundHubExceptionHandler {
         map.put("message", "에러 발생");
 
         return new ResponseEntity<>(map, responseHeaders, httpStatus);
+    }
+
+    @ExceptionHandler(value = AroundHubException.class)
+    public ResponseEntity<Map<String,String>> ExceptionHandler(AroundHubException e){
+        HttpHeaders responseHeaders = new HttpHeaders();
+
+        Map<String, String> map = new HashMap<>();
+        map.put("error type", e.getHttpStatusType());
+        map.put("error code", Integer.toString(e.getHttpStatusCode()));
+        map.put("message", e.getMessage());
+
+        return new ResponseEntity<>(map, responseHeaders, e.getHttpStatus());
     }
 
 }

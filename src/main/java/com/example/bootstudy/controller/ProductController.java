@@ -1,5 +1,7 @@
 package com.example.bootstudy.controller;
 
+import com.example.bootstudy.common.Constants;
+import com.example.bootstudy.common.exception.AroundHubException;
 import com.example.bootstudy.data.dto.ProductDto;
 import com.example.bootstudy.service.ProductService;
 import org.slf4j.Logger;
@@ -71,6 +73,11 @@ public class ProductController {
     @DeleteMapping(value = "/product/{productId}")
     public ProductDto deleteProduct(@PathVariable String productId) {
         return null;
+    }
+
+    @PostMapping(value = "/product/exception")
+    public void exceptionTest() throws AroundHubException {
+        throw new AroundHubException(Constants.ExceptionClass.PRODUCT, HttpStatus.BAD_REQUEST, "의도한 에러가 발생하였습니다.");
     }
 
 }
