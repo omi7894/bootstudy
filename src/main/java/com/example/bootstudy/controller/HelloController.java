@@ -36,7 +36,7 @@ public class HelloController {
         throw new Exception();
     }
 
-    //주석처리시 Advice네 ExceptionHandler 호출
+    //주석처리시 Advice내 ExceptionHandler 호출
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<Map<String, String>> ExceptionHandler(Exception e) {
         HttpHeaders responseHeaders = new HttpHeaders();

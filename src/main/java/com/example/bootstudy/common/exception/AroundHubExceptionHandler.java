@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestControllerAdvice
+@RestControllerAdvice //Controller에서 발생한 예외는 여기서 처리하겠다!
 public class AroundHubExceptionHandler {
 
     private final Logger LOGGER = LoggerFactory.getLogger(AroundHubExceptionHandler.class);
