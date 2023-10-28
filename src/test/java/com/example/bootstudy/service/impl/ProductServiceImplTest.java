@@ -1,4 +1,4 @@
-package com.example.bootstudy.service.Impl;
+package com.example.bootstudy.service.impl;
 
 import static org.mockito.Mockito.verify;
 
@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import com.example.bootstudy.service.Impl.ProductServiceImpl;
 import com.example.bootstudy.data.dto.ProductDto;
 import com.example.bootstudy.data.entity.ProductEntity;
 import com.example.bootstudy.data.handler.Impl.ProductDataHandlerImpl;

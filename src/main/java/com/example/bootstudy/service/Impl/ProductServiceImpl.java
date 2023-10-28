@@ -1,4 +1,4 @@
-package com.example.bootstudy.service.Impl;
+package com.example.bootstudy.service.impl;
 
 import com.example.bootstudy.data.dto.ProductDto;
 import com.example.bootstudy.data.entity.ProductEntity;

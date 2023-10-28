@@ -9,10 +9,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.example.bootstudy.data.dto.ProductDto;
-import com.example.bootstudy.service.Impl.ProductServiceImpl;
+import com.example.bootstudy.service.impl.ProductServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.sun.tools.attach.AgentInitializationException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
