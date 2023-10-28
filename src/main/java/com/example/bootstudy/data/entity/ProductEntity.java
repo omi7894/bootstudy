@@ -4,6 +4,8 @@ import com.example.bootstudy.data.dto.ProductDto;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Entity;
+
+import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.*;
 
 @Entity
@@ -13,8 +15,8 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Table(name = "product")
-public class ProductEntity {
-
+public class ProductEntity extends BaseEntity {
+//BaseEntity에 있는 컬럼 추가됨(@MappedSuperclass)
     @Id
     String productId;
 
