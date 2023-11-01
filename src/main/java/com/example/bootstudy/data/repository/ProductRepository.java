@@ -1,5 +1,8 @@
 package com.example.bootstudy.data.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import com.example.bootstudy.data.entity.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -51,6 +54,21 @@ public interface ProductRepository extends JpaRepository<ProductEntity, String> 
     // (Is)Like, (Is)Containing, (Is)StartingWith, (Is)EndingWith
     List<ProductEntity> findByProductNameContaining(String name);
 
+
+    /*정렬과 페이징*/
+
+    //Asc, Desc
+    List<ProductEntity> findByProductNameContainingOrderByProductStockAsc(String name);
+    List<ProductEntity> findByProductNameContainingOrderByProductStockDesc(String name);
+
+    //여러 정렬 기준 사용
+    List<ProductEntity> findByProductNameContainingOrderByProductPriceAscProductStockDesc(String name);
+
+    //매개변수를 확용한 정렬
+    List<ProductEntity> findByProductNameContaining(String name, Sort sort);
+
+    //페이징 처리하기
+    List<ProductEntity> findByProductPriceGreaterThan(Integer price, Pageable pageable);
 
 
 }
