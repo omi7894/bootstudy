@@ -14,8 +14,9 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 @Table(name = "product")
-public class ProductEntity extends BaseEntity {
+public class ProductEntity {
 //BaseEntity에 있는 컬럼 추가됨(@MappedSuperclass)
     @Id
     String productId;
