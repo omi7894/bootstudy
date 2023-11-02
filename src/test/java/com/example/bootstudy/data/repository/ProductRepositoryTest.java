@@ -316,5 +316,65 @@ public class ProductRepositoryTest {
         }
     }
 
+    @Test
+    public void parameterQueryTest(){
+        List<ProductEntity> foundAll = productRepository.findAll();
+        System.out.println("====VV Test Data VV====");
+        for (ProductEntity productEntity : foundAll) {
+            System.out.println(productEntity.toString());
+        }
+        System.out.println("====^^ Test Data ^^====");
+
+        List<ProductEntity> foundProducts = productRepository.findByProductPriceWithParameter(2000);
+        for (ProductEntity productEntity : foundProducts) {
+            System.out.println(productEntity);
+        }
+    }
+
+    @Test
+    public void parameterNamingQueryTest(){
+        List<ProductEntity> foundAll = productRepository.findAll();
+        System.out.println("====VV Test Data VV====");
+        for (ProductEntity productEntity : foundAll) {
+            System.out.println(productEntity.toString());
+        }
+        System.out.println("====^^ Test Data ^^====");
+
+        List<ProductEntity> foundProducts = productRepository.findByProductPriceWithParameterNaming(2000);
+        for (ProductEntity productEntity : foundProducts) {
+            System.out.println(productEntity);
+        }
+    }
+
+    @Test
+    public void parameterNamingQueryTest2(){
+        List<ProductEntity> foundAll = productRepository.findAll();
+        System.out.println("====VV Test Data VV====");
+        for (ProductEntity productEntity : foundAll) {
+            System.out.println(productEntity.toString());
+        }
+        System.out.println("====^^ Test Data ^^====");
+
+        List<ProductEntity> foundProducts = productRepository.findByProductPriceWithParameterNaming2(2000);
+        for (ProductEntity productEntity : foundProducts) {
+            System.out.println(productEntity);
+        }
+    }
+
+    @Test
+    public void nativeQueryPagingTest(){
+        List<ProductEntity> foundAll = productRepository.findAll();
+        System.out.println("====VV Test Data VV====");
+        for (ProductEntity productEntity : foundAll) {
+            System.out.println(productEntity.toString());
+        }
+        System.out.println("====^^ Test Data ^^====");
+
+        List<ProductEntity> foundProducts =
+                productRepository.findByProductPriceWithParameterPaging(2000, PageRequest.of(0,1));
+        for (ProductEntity productEntity : foundProducts) {
+            System.out.println(productEntity);
+        }
+    }
 
 }
