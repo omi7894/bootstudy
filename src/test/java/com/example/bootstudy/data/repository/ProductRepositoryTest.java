@@ -284,4 +284,22 @@ public class ProductRepositoryTest {
     }
 
 
+    /*@Query 사용하기 Test*/
+
+    @Test
+    public void queryTest(){
+        List<ProductEntity> foundAll = productRepository.findAll();
+        System.out.println("====VV Test Data VV====");
+        for (ProductEntity productEntity : foundAll) {
+            System.out.println(productEntity.toString());
+        }
+        System.out.println("====^^ Test Data ^^====");
+
+        List<ProductEntity> foundProducts = productRepository.findByProductPriceBasis();
+        for (ProductEntity productEntity : foundProducts) {
+            System.out.println(productEntity);
+        }
+    }
+
+
 }
