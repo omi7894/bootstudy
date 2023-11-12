@@ -30,9 +30,9 @@ public class HttpInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         LOGGER.info("[postHandle] postHandle is performed");
-        LOGGER.info("[postHandle] request : {}", request);
+        /*LOGGER.info("[postHandle] request : {}", request);
         LOGGER.info("[postHandle] response : {}", response);
-        LOGGER.info("[postHandle] response : {}", response.getHeaderNames());
+        LOGGER.info("[postHandle] response : {}", response.getHeaderNames());*/
     }
 
     @Override
