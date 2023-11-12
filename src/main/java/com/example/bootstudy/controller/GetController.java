@@ -17,6 +17,7 @@ public class GetController {
 
     @GetMapping(value = "/name")
     public String getName(){
+        System.out.println("getName 실행되었습니다. ");
         return "Flature";
     }
 
